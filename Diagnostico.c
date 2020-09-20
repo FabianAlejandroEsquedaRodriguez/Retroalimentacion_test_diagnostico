@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "personajes.h"
 #include <stdio.h>
 
 //Funciones
@@ -39,7 +40,8 @@ int main(){
         do{
                 printf("1. Arreglo de enteros\n");
                 printf("2. Mostrar cadena n veces\n");
-                printf("3. Ragistrar personajes\n");
+                printf("3. Registrar personajes\n");
+                printf("4. Mostrar personajes\n");
                 printf("0. Salir\n");
 
                 printf("\n\nElige una opcion: ");
@@ -60,9 +62,14 @@ int main(){
                         mostrar(n, cadena); printf("\n\n"); system("pause"); system("cls");
                     break;
 
-                case '3':
+                case '3': capturar_personajes();//La cual esta en el header "personajes.h"
+                            printf("\n\n"); system("pause"); system("cls");
                     break;
                 
+                case '4': mostrar_personajes();//La cual esta en el header "personajes.h"
+                            printf("\n\n"); system("pause"); system("cls");
+                    break;
+                    
                 default:
                     break;
                 }
