@@ -24,8 +24,17 @@ void arreglo_enteros(){
     printf("\nEl promedio es: %.2f", promedio = suma/5);
 }
 
+void mostrar(int n, char cadena[]){
+    printf("\n\nMostrar la cadena %i veces\n\n", n);
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s", cadena);
+    }   
+}
+
 int main(){
         char op;
+        char cadena[20]; int n;
 
         do{
                 printf("1. Arreglo de enteros\n");
@@ -44,7 +53,11 @@ int main(){
                 case '1': arreglo_enteros(); printf("\n\n"); system("pause"); system("cls");
                     break;
 
-                case '2':
+                case '2': printf("Escribe una cadena de hasta 20 caracteres: ");
+                            fflush(stdin);
+                            fgets(cadena, sizeof(cadena), stdin); 
+                         printf("N: "); scanf("%i", &n);
+                        mostrar(n, cadena); printf("\n\n"); system("pause"); system("cls");
                     break;
 
                 case '3':
